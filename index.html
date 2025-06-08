@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Для моей любимой кисы</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Marck+Script&family=Montserrat:wght@100;400;700&display=swap');
+        
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #ffebee;
+            color: #d81b60;
+            overflow-x: hidden;
+            min-height: 100vh;
+            position: relative;
+        }
+        
+        .background-text {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+            overflow: hidden;
+        }
+        
+        .background-text span {
+            position: absolute;
+            font-family: 'Marck Script', cursive;
+            color: rgba(216, 27, 96, 0.08);
+            animation: float 15s linear infinite;
+            user-select: none;
+        }
+        
+        @keyframes float {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+            }
+            100% {
+                transform: translateY(-100px) rotate(360deg);
+            }
+        }
+        
+        .main-content {
+            padding: 50px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        
+        .love-text {
+            font-family: 'Marck Script', cursive;
+            font-size: 48px;
+            margin: 20px;
+            padding: 30px;
+            background-color: rgba(255, 255, 255, 0.85);
+            border-radius: 20px;
+            box-shadow: 0 10px 20px rgba(216, 27, 96, 0.2);
+            max-width: 80%;
+            position: relative;
+        }
+        
+        .date {
+            font-size: 24px;
+            margin: 40px 0;
+            color: #880e4f;
+            font-weight: bold;
+            background: linear-gradient(45deg, #ff4081, #c2185b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            padding: 15px;
+            border-radius: 10px;
+        }
+        
+        .heart {
+            position: fixed;
+            pointer-events: none;
+            z-index: 10;
+            animation: heartFloat 4s ease-in-out infinite;
+            user-select: none;
+            font-size: 24px;
+        }
+        
+        @keyframes heartFloat {
+            0%, 100% {
+                transform: translate(0, 0) rotate(0deg);
+            }
+            25% {
+                transform: translate(5px, -10px) rotate(5deg);
+            }
+            50% {
+                transform: translate(-5px, -20px) rotate(-5deg);
+            }
+            75% {
+                transform: translate(5px, -10px) rotate(5deg);
+            }
+        }
+        
+        .dreams-section {
+            margin: 50px 0;
+            font-size: 22px;
+            color: #ad1457;
+            max-width: 700px;
+            line-height: 1.6;
+            padding: 30px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(216, 27, 96, 0.1);
+            font-family: 'Marck Script', cursive;
+        }
+        
+        .dream-item {
+            margin: 25px 0;
+            position: relative;
+            padding-left: 40px;
+        }
+        
+        .dream-item:before {
+            content: "❤️";
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        
+        .miss-you {
+            margin: 100px 0;
+            font-size: 36px;
+            font-family: 'Marck Script', cursive;
+            color: #c2185b;
+            padding: 40px;
+            background: linear-gradient(135deg, rgba(255,235,238,0.9), rgba(255,209,220,0.9));
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(216, 27, 96, 0.3);
+            max-width: 80%;
+            text-align: center;
+        }
+        
+        .emoji {
+            font-size: 30px;
+            vertical-align: middle;
+            animation: pulse 1.5s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.3); }
+            100% { transform: scale(1); }
+        }
+        
+        .special-emoji {
+            font-size: 40px;
+            animation: pulse 1s infinite alternate;
+        }
+    </style>
+</head>
+<body>
+    <div class="background-text" id="background-text"></div>
+    
+    <div class="main-content">
+        <div class="love-text">
+            Я очень очень очень очень сильно люблю тебя, киса! <span class="emoji">❤️</span><span class="emoji">😘</span><span class="emoji">💋</span>
+        </div>
+        
+        <div class="date">
+            С 21.11.2024 ты стала самым важным человеком в моей жизни <span class="emoji">🥰</span>
+        </div>
+        
+        <div class="dreams-section">
+            <div class="dream-item">Я мечтаю, как мы вместе поедем в Париж и будем целоваться у Эйфелевой башни на закате <span class="emoji">🗼</span><span class="emoji">🌅</span></div>
+            
+            <div class="dream-item">Обязательно поедем на море, где будем загорать на белоснежном песке и купаться в бирюзовой воде <span class="emoji">🏝️</span><span class="emoji">🌊</span></div>
+            
+            <div class="dream-item">Мечтаю о нашей уютной квартире, где мы будем радовать друг друга и быть вместе 24/7 <span class="emoji">🏠</span><span class="emoji">☕</span></div>
+            
+            <div class="dream-item">Обязательно научимся кататься на сноубордах, хочу покататься вместе с тобой <span class="emoji">🌌</span><span class="emoji">❄️</span></div>
+            
+            <div class="dream-item">Мечтаю о наших совместных утрах, когда я буду готовить тебе завтрак и будить нежными поцелуями <span class="emoji">🍳</span><span class="emoji">☀️</span></div>
+            
+            <div class="dream-item">Обязательно заведём котика или собачку, и будем вместе заботиться о нашем пушистом малыше <span class="emoji">🐱</span><span class="emoji">🐶</span></div>
+        </div>
+        
+        <div class="miss-you">
+            Элечка, я по тебе очень очень скучаю, я безумно сильно люблю тебя, киса! 
+				От Димки
+            <span class="special-emoji">💞</span><span class="special-emoji">💘</span><span class="special-emoji">💓</span>
+        </div>
+    </div>
+    
+    <script>
+        // Создаем ОЧЕНЬ много фоновых текстов "Элечка" с анимацией
+        const bgTextContainer = document.getElementById('background-text');
+        for (let i = 0; i < 200; i++) {
+            setTimeout(() => {
+                const span = document.createElement('span');
+                span.textContent = 'Элечка';
+                span.style.opacity = Math.random() * 0.1 + 0.03;
+                span.style.fontSize = `${Math.random() * 40 + 20}px`;
+                span.style.left = `${Math.random() * 100}vw`;
+                span.style.animationDuration = `${Math.random() * 20 + 10}s`;
+                span.style.animationDelay = `${Math.random() * 5}s`;
+                bgTextContainer.appendChild(span);
+            }, i * 100);
+        }
+
+        // Создаем случайные сердечки по всей странице
+        function createHeart() {
+            const heart = document.createElement('div');
+            const hearts = ['❤️', '🧡', '💛', '💚', '💙', '💜', '🤎', '🖤', '🤍', '💕', '💞', '💓', '💗', '💖', '💘', '💝'];
+            heart.innerHTML = hearts[Math.floor(Math.random() * hearts.length)];
+            heart.className = 'heart';
+            
+            // Случайная позиция по всей высоте страницы
+            const xPos = Math.random() * window.innerWidth;
+            const yPos = Math.random() * document.body.scrollHeight;
+            
+            // Случайный размер
+            const size = Math.random() * 30 + 20;
+            
+            // Случайная анимация
+            const duration = Math.random() * 3 + 2;
+            const delay = Math.random() * 2;
+            
+            heart.style.left = `${xPos}px`;
+            heart.style.top = `${yPos}px`;
+            heart.style.fontSize = `${size}px`;
+            heart.style.animationDuration = `${duration}s`;
+            heart.style.animationDelay = `${delay}s`;
+            
+            document.body.appendChild(heart);
+            
+            // Удаляем сердечко после анимации
+            setTimeout(() => {
+                if (heart.parentNode) {
+                    heart.parentNode.removeChild(heart);
+                }
+            }, duration * 1000);
+        }
+        
+        // Создаем много сердечек при загрузке
+        for(let i = 0; i < 100; i++) {
+            setTimeout(() => {
+                createHeart();
+            }, i * 100);
+        }
+        
+        // Постоянно создаем новые сердечки
+        setInterval(() => {
+            createHeart();
+        }, 200);
+        
+        // Сердечки при клике
+        document.addEventListener('click', function(e) {
+            for(let i = 0; i < 10; i++) {
+                setTimeout(() => {
+                    createHeart();
+                }, i * 100);
+            }
+        });
+    </script>
+</body>
+</html>
